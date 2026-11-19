@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuliner Nusantara - Sabang Sampai Merauke</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Indikator Progres Scroll di Atas Layar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Dekorasi Latar Belakang -->
+    <div class="bg-decoration">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="topHeader">
+        <div class="container hero-content">
+            <h1 class="animate-hero">🌊 Kuliner Nusantara</h1>
+            <p class="animate-hero delay-1">Menjelajahi Kekayaan Rasa & Resep dari Sabang Sampai Merauke</p>
+        </div>
+    </header>
+
+    <!-- Pencarian & Filter Wilayah -->
+    <section class="controls container animate-hero delay-2">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Cari makanan khas atau resep (contoh: Rendang, Papeda, Gudeg)...">
+        </div>
+        <div class="filter-buttons" id="filterButtons">
+            <button class="filter-btn active" data-region="Semua">Semua Wilayah</button>
+            <button class="filter-btn" data-region="Sumatera">Sumatera</button>
+            <button class="filter-btn" data-region="Jawa">Jawa</button>
+            <button class="filter-btn" data-region="Bali & Nusa Tenggara">Bali & Nusa Tenggara</button>
+            <button class="filter-btn" data-region="Kalimantan">Kalimantan</button>
+            <button class="filter-btn" data-region="Sulawesi">Sulawesi</button>
+            <button class="filter-btn" data-region="Maluku & Papua">Maluku & Papua</button>
+        </div>
+    </section>
+
+    <!-- Daftar Kartu Makanan -->
+    <main class="container">
+        <div class="food-grid" id="foodGrid"></div>
+    </main>
+
+    <!-- Tombol Kembali ke Atas -->
+    <button id="backToTop" class="back-to-top" title="Kembali ke atas">↑</button>
+
+    <!-- Modal Pop-up Resep & Detail Makanan -->
+    <div class="modal" id="foodModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <img id="modalImg" src="" alt="Gambar Makanan">
+            <div class="modal-body">
+                <span class="badge" id="modalRegion">Wilayah</span>
+                <h2 id="modalTitle">Nama Makanan</h2>
+                <h4 id="modalOrigin">Asal Provinsi</h4>
+                <p id="modalDesc">Deskripsi lengkap makanan...</p>
+                
+                <div class="recipe-section">
+                    <h3>📝 Bahan-Bahan:</h3>
+                    <ul id="modalIngredients"></ul>
+                </div>
+
+                <div class="recipe-section">
+                    <h3>👨‍🍳 Cara Membuat:</h3>
+                    <ol id="modalSteps"></ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Pesona Kuliner Nusantara | Dibuat dengan 💙 untuk Indonesia</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
